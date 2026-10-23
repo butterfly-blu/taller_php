@@ -32,7 +32,7 @@ elseif (isset($_POST['cantidad'])) {
     <link rel="stylesheet" href="../css/estilos.css">
 </head>
 <body>
-    <?php include '../includes/menu.php'; ?>
+    <?php include '../Menu.php'; ?>
     <main>
         <h1>Media, mediana y moda</h1>
 

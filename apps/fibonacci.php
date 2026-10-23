@@ -31,7 +31,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <link rel="stylesheet" href="../css/estilos.css">
 </head>
 <body>
-    <?php include __DIR__ . '/../includes/menu.php'; ?>
+    <?php include __DIR__ . '/../Menu.php'; ?>
     <main>
         <h1>Sucesión de Fibonacci o factorial</h1>
         <form method="post">
