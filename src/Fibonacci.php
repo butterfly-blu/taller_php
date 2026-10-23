@@ -1,46 +1,46 @@
+
 <?php
 class Secuencias
 {
-    private int $n;
+    public $numero;
 
-    public function __construct(int $n)
+    public function __construct($numero)
     {
-        if ($n < 0) {
-            throw new InvalidArgumentException('El número debe ser mayor o igual a 0.');
-        }
-        $this->n = $n;
+        $this->numero = $numero;
     }
 
-    // Primeros n términos de Fibonacci: 0, 1, 1, 2, 3, 5...
-    public function fibonacci(): array
+    // Devuelve los primeros "numero" términos de Fibonacci: 0, 1, 1, 2, 3, 5...
+    public function fibonacci()
     {
-        if ($this->n > 90) {
-            throw new InvalidArgumentException('Para Fibonacci usa un número hasta 90.');
+        $serie = array();
+        $anterior = 0;
+        $actual = 1;
+
+        for ($i = 0; $i < $this->numero; $i++) {
+            $serie[] = $anterior;
+
+            // Cada término es la suma de los dos anteriores
+            $siguiente = $anterior + $actual;
+            $anterior = $actual;
+            $actual = $siguiente;
         }
-        $serie = [];
-        $a = 0;
-        $b = 1;
-        for ($i = 0; $i < $this->n; $i++) {
-            $serie[] = $a;
-            [$a, $b] = [$b, $a + $b];
-        }
+
         return $serie;
     }
 
-    // Factoriales de 0 hasta n: 0!, 1!, 2!... n!
-    public function factorial(): array
+    // Devuelve los factoriales de 0 hasta "numero": 0!, 1!, 2!... n!
+    public function factorial()
     {
-        if ($this->n > 20) {
-            throw new InvalidArgumentException('Para factorial usa un número hasta 20.');
-        }
-        $serie = [];
+        $serie = array();
         $resultado = 1;
-        for ($i = 0; $i <= $this->n; $i++) {
+
+        for ($i = 0; $i <= $this->numero; $i++) {
             if ($i > 0) {
-                $resultado *= $i;
+                $resultado = $resultado * $i;
             }
             $serie[] = $resultado;
         }
+
         return $serie;
     }
 }

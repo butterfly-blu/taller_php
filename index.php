@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="css/estilos.css">
 </head>
 <body>
-    <?php include 'includes/menu.php'; ?>
+    <?php include 'Menu.php'; ?>
     <main>
         <h1>Taller de aplicaciones en PHP</h1>
         <p>Selecciona una aplicación del menú para comenzar.</p>
