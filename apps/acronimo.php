@@ -1,5 +1,6 @@
 <?php
-include  '/../src/Acronimo.php';
+$base = '../';
+include  '../src/Acronimo.php';
 $resultado = null;
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $resultado = (new Acronimo($_POST['frase'] ?? ''))->generar();
@@ -13,11 +14,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <link rel="stylesheet" href="../css/estilos.css">
 </head>
 <body>
-    <?php include '/../Menu.php'; ?>
+    <?php include '../Menu.php'; ?>
     <main>
         <h1>Convertir frase en acrónimo</h1>
         <form method="post">
-            <input type="text" name="frase" placeholder="Thank George It's Friday!" required>
+            <input type="text" name="frase" placeholder="La Vida es Linda !!" required>
             <button type="submit">Convertir</button>
         </form>
         <?php if ($resultado !== null): ?>

@@ -1,17 +1,18 @@
 <?php
 $base = $base ?? '';
 $opciones = [
-    'acronimo.php'            => '1. Acrónimos',
-    'fibonacci.php' => '2. Fibonacci / Factorial',
-    'estadistica.php'         => '3. Estadística',
-    'conjunto.php'           => '4. Conjuntos',
-    'convertir.php'             => '5. Binario',
-    'arbol_binario.php'               => '6. Árbol binario',
-    'calculadora.php'         => '7. Calculadora',
+    'acronimo.php'           => ' Acrónimos',
+    'fibonacci.php'          => 'Fibonacci / Factorial',
+    'estadistica.php'        => ' Estadística',
+    'conjunto.php'           => ' Conjuntos',
+    'convertir.php'          => ' Binario',
+    'arbol_binario.php'      => ' Árbol binario',
+    'calculadora.php'        => ' Calculadora',
 ];
 ?>
 <nav class="menu">
     <a href="<?= $base ?>index.php" class="inicio">Inicio</a>
+     <link rel="stylesheet" href="css/estilos.css">
     <?php foreach ($opciones as $archivo => $titulo): ?>
         <a href="<?= $base ?>apps/<?= $archivo ?>"><?= $titulo ?></a>
     <?php endforeach; ?>

@@ -1,40 +1,174 @@
-/* MENU*/
-body { font-family: Arial, sans-serif; margin: 0; background: #f4f6f8; color: #222; }
-.menu { background: #1f3a5f; padding: 10px; display: flex; flex-wrap: wrap; gap: 6px; }
-.menu a { color: #fff; text-decoration: none; padding: 8px 12px; border-radius: 6px; }
-.menu a:hover { background: #3b5f8f; }
-main { max-width: 800px; margin: 24px auto; background: #fff; padding: 24px; border-radius: 10px; }
-input, select, button { padding: 8px; margin: 4px 0; font-size: 1rem; }
-button { background: #1f3a5f; color: #fff; border: 0; border-radius: 6px; cursor: pointer; }
-.resultado { background: #eaf3ea; padding: 12px; border-radius: 6px; }
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+@import 'package:google_fonts/google_fonts.dart';
+:root {
+    --texto: #2b2b2b;
+}
+
+* { box-sizing: border-box; }
+
+body {
+    font-family: 'Exo 2';
+    margin: 0;
+    background:  #d8d1c2;
+    color: #2b2b2b;
+}
+
+/* ===== Menú lateral ===== */
+.menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 240px;
+    height: 100vh;
+    background: linear-gradient(180deg, #183630 0%, #0b0102 100%);
+    padding: 24px 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    overflow-y: auto;
+    box-shadow: 4px 0 12px rgba(0, 0, 0, 0.25);
+}
+
+.menu::before {
+    content: "Taller PHP";
+    color: #d8d1c2;
+    font-size: 2.5rem;
+    font-weight: 800;
+    padding: 0 18px 20px 14px;
+    margin-bottom: 8px;
+    border-bottom: 1px solid rgba(245, 235, 224, 0.3);
+}
+
+.menu a {
+    color: #d8d1c2;
+    text-decoration: none;
+    padding: 11px 14px;
+    border-radius: 8px;
+    font-weight: 500;
+    font-size: 0.95rem;
+    border-left: 4px solid transparent;
+    transition: background 0.2s, border-color 0.2s, padding-left 0.2s;
+}
+
+.menu a:hover {
+    background: rgba(245, 235, 224, 0.15);
+    border-left-color: #d8d1c2;
+    padding-left: 18px;
+}
+
+/* ===== Contenido ===== */
+main {
+    margin-left: 240px;
+    padding: 40px;
+    max-width: 1000px;
+}
+
+main h1 {
+    color: #183630;
+    margin-top: 0;
+    border-bottom: 3px solid #183630;
+    padding-bottom: 10px;
+    text-align: center;
+}
+
+main h3 { color: #183630; }
+
+/* Tarjeta blanca para el contenido */
+main {
+    background: #fff;
+    margin: 30px 30px 30px 270px;
+    border-radius: 14px;
+    box-shadow: 0 4px 14px rgba(86, 28, 36, 0.15);
+    max-width: none;
+}
+
+/* ===== Formularios ===== */
+label { font-weight: 600; color: #183630; }
+
+input, select, button {
+    padding: 10px 12px;
+    margin: 5px 0;
+    font-size: 1rem;
+    font-family: inherit;
+}
+
+input, select {
+    border: 2px solid #e8d3d6;
+    border-radius: 8px;
+    background: #fff;
+}
+
+input:focus, select:focus {
+    outline: none;
+    border-color: #183630;
+}
+
+button {
+    background: #183630;
+    color: #fff;
+    border: 0;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background 0.2s;
+}
+
+button:hover { background: #84927d; }
+
+/*      Resultados       */
+.resultado {
+    background:#f0debd;
+    border-left: 5px solid #183630;
+    padding: 14px 16px;
+    border-radius: 8px;
+    margin-top: 16px;
+}
+
+table { border-collapse: collapse; margin: 10px 0; }
+th { background: #183630; color: #fff; padding: 8px 14px; }
+td { padding: 8px 14px; border: 1px solid #e5e0bb; text-align: center; }
+
+a { color: #183630; }
 
 
-/*ARBOL BINARIO*/
-
+/*     Árbol binario   */
 .arbol { overflow-x: auto; padding: 10px 0; }
 .arbol ul { display: flex; justify-content: center; list-style: none; margin: 0; padding: 20px 0 0 0; position: relative; }
 .arbol > ul { padding-top: 0; }
 .arbol li { text-align: center; position: relative; padding: 20px 6px 0 6px; }
 .arbol > ul > li { padding-top: 0; }
 
-/* líneas horizontales y verticales entre hermanos */
 .arbol li::before, .arbol li::after {
     content: ''; position: absolute; top: 0; right: 50%;
-    border-top: 1px solid #888; width: 50%; height: 20px;
+    border-top: 2px solid #aa2727; width: 50%; height: 20px;
 }
-.arbol li::after { right: auto; left: 50%; border-left: 1px solid #888; }
+.arbol li::after { right: auto; left: 50%; border-left: 2px solid #aa2727; }
 .arbol > ul > li::before, .arbol > ul > li::after { display: none; }
 .arbol li:first-child::before, .arbol li:last-child::after { border: 0 none; }
-.arbol li:last-child::before { border-right: 1px solid #888; }
+.arbol li:last-child::before { border-right: 2px solid #aa2727; }
 
-/* línea vertical del padre hacia los hijos */
 .arbol ul ul::before {
     content: ''; position: absolute; top: 0; left: 50%;
-    border-left: 1px solid #888; height: 20px;
+    border-left: 2px solid #aa2727; height: 20px;
 }
 
 .arbol .nodo {
     display: inline-block; min-width: 20px; padding: 8px 12px;
-    border: 2px solid #1f3a5f; border-radius: 50%; background: #fff; font-weight: bold;
+    border: 2px solid #183630; border-radius: 50%;
+    background:  #d8d1c2; color: #183630; font-weight: bold;
 }
 .arbol .vacio { border: 1px dashed #ccc; background: transparent; color: transparent; }
+
+/* ===== Pantallas pequeñas: el menú vuelve a ir arriba ===== */
+@media (max-width: 800px) {
+    .menu {
+        position: static;
+        width: 100%;
+        height: auto;
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding: 10px;
+    }
+    .menu::before { display: none; }
+    main { margin: 16px; padding: 20px; }
+}
