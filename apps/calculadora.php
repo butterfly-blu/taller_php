@@ -41,11 +41,13 @@ $historial = $calculadora->obtenerHistorial();
 ?>
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <title>Calculadora</title>
     <link rel="stylesheet" href="../css/estilos.css">
 </head>
+
 <body>
     <?php include __DIR__ . '/../Menu.php'; ?>
     <main>
@@ -55,11 +57,11 @@ $historial = $calculadora->obtenerHistorial();
             <input type="number" step="any" name="num1" placeholder="Primer número" required>
 
             <select name="operacion">
-                <option value="suma">Suma (+)</option>
-                <option value="resta">Resta (-)</option>
-                <option value="multiplicacion">Multiplicación (×)</option>
-                <option value="division">División (÷)</option>
-                <option value="porcentaje">Porcentaje (% de)</option>
+                <option value="suma">Suma +</option>
+                <option value="resta">Resta -</option>
+                <option value="multiplicacion">Multiplicación ×</option>
+                <option value="division">División ÷</option>
+                <option value="porcentaje">Porcentaje % </option>
             </select>
 
             <input type="number" step="any" name="num2" placeholder="Segundo número" required>
@@ -89,4 +91,5 @@ $historial = $calculadora->obtenerHistorial();
         <?php } ?>
     </main>
 </body>
+
 </html>

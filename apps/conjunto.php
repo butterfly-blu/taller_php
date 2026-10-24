@@ -42,11 +42,13 @@ if (isset($_POST['conjuntoA']) && isset($_POST['conjuntoB'])) {
 ?>
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <title>Conjuntos</title>
     <link rel="stylesheet" href="../css/estilos.css">
 </head>
+
 <body>
     <?php include '../Menu.php'; ?>
     <main>
@@ -79,4 +81,5 @@ if (isset($_POST['conjuntoA']) && isset($_POST['conjuntoB'])) {
         <?php } ?>
     </main>
 </body>
+
 </html>

@@ -20,11 +20,13 @@ if (isset($_POST['numero'])) {
 ?>
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <title>Convertir a binario</title>
     <link rel="stylesheet" href="../css/estilos.css">
 </head>
+
 <body>
     <?php include '../Menu.php'; ?>
     <main>
@@ -67,4 +69,5 @@ if (isset($_POST['numero'])) {
         <?php } ?>
     </main>
 </body>
+
 </html>

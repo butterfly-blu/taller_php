@@ -1,19 +1,81 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
 @import 'package:google_fonts/google_fonts.dart';
-:root {
-    --texto: #2b2b2b;
-}
 
-* { box-sizing: border-box; }
+* {
+    box-sizing: border-box;
+}
 
 body {
     font-family: 'Exo 2';
     margin: 0;
-    background:  #d8d1c2;
-    color: #2b2b2b;
+    background: #d8d1c2;
+    background-image: url(../resources/fondo.jpg);
+    color: #201d1d;
+    background-size: cover;
+    /* llena toda la pantalla */
+    background-position: center;
+    /* centra la imagen */
+    background-repeat: no-repeat;
+    /* no se repite */
+    background-attachment: fixed;
 }
 
-/* ===== Menú lateral ===== */
+/* INDEX  */
+
+/* Imagen de portada */
+.portada {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 20px;
+}
+
+.main_index {
+    margin-top: 50px;
+    padding: 30px;
+    max-width: 2000px;
+    margin-left: 50px;
+    margin-inline-end: 50px;
+}
+
+/* Tarjetas de la página principal */
+.tarjetas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.tarjeta {
+    width: 300px;
+    padding: 30px;
+    background: #d8d1c2;
+    border-left: 5px solid #183630;
+    border-radius: 10px;
+    text-decoration: none;
+    color: #2b2b2b;
+    ;
+    box-shadow: 0 2px 8px rgba(86, 28, 36, 0.15);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.tarjeta:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 14px rgba(86, 28, 36, 0.3);
+}
+
+.tarjeta h3 {
+    margin: 0 0 6px 0;
+    color: #183630;
+}
+
+.tarjeta p {
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+/*     Menú lateral      */
 .menu {
     position: fixed;
     top: 0;
@@ -32,11 +94,11 @@ body {
 .menu::before {
     content: "Taller PHP";
     color: #d8d1c2;
-    font-size: 2.5rem;
+    font-size: 4rem;
     font-weight: 800;
     padding: 0 18px 20px 14px;
-    margin-bottom: 8px;
-    border-bottom: 1px solid rgba(245, 235, 224, 0.3);
+    margin-bottom: 10px;
+    border-bottom: 1px solid rgba(107, 5, 27, 0.3);
 }
 
 .menu a {
@@ -56,7 +118,7 @@ body {
     padding-left: 18px;
 }
 
-/* ===== Contenido ===== */
+/*     Contenido.   */
 main {
     margin-left: 240px;
     padding: 40px;
@@ -67,108 +129,180 @@ main h1 {
     color: #183630;
     margin-top: 0;
     border-bottom: 3px solid #183630;
-    padding-bottom: 10px;
+    padding-bottom: 20px;
     text-align: center;
 }
 
-main h3 { color: #183630; }
+main h3 {
+    color: #183630;
+}
 
-/* Tarjeta blanca para el contenido */
+/*     Tarjeta blanca para el contenido.  */
 main {
-    background: #fff;
+    background: #eae4d6;
     margin: 30px 30px 30px 270px;
     border-radius: 14px;
     box-shadow: 0 4px 14px rgba(86, 28, 36, 0.15);
     max-width: none;
 }
 
-/* ===== Formularios ===== */
-label { font-weight: 600; color: #183630; }
+/*    Formularios   */
+label {
+    font-weight: 800;
+    color: #000000;
+}
 
-input, select, button {
+input,
+select,
+button {
     padding: 10px 12px;
     margin: 5px 0;
     font-size: 1rem;
     font-family: inherit;
 }
 
-input, select {
-    border: 2px solid #e8d3d6;
+input,
+select {
+    border: 2px solid #000000;
     border-radius: 8px;
-    background: #fff;
+    background: #183630;
 }
 
-input:focus, select:focus {
+input:focus,
+select:focus {
     outline: none;
-    border-color: #183630;
+    border-color: #2c6459;
 }
 
 button {
     background: #183630;
-    color: #fff;
+    color: #ded4c3;
     border: 0;
     border-radius: 8px;
     cursor: pointer;
     font-weight: 600;
     transition: background 0.2s;
+
 }
 
-button:hover { background: #84927d; }
+button:hover {
+    background: #84927d;
+}
+
 
 /*      Resultados       */
 .resultado {
-    background:#f0debd;
+    background: #e8d6b7;
     border-left: 5px solid #183630;
     padding: 14px 16px;
     border-radius: 8px;
     margin-top: 16px;
 }
 
-table { border-collapse: collapse; margin: 10px 0; }
-th { background: #183630; color: #fff; padding: 8px 14px; }
-td { padding: 8px 14px; border: 1px solid #e5e0bb; text-align: center; }
+table {
+    border-collapse: collapse;
+    margin: 10px 0;
+}
 
-a { color: #183630; }
+th {
+    background: #183630;
+    color: #fff;
+    padding: 8px 14px;
+}
+
+td {
+    padding: 8px 14px;
+    border: 1px solid #e5e0bb;
+    text-align: center;
+}
+
+a {
+    color: #183630;
+}
 
 
 /*     Árbol binario   */
-.arbol { overflow-x: auto; padding: 10px 0; }
-.arbol ul { display: flex; justify-content: center; list-style: none; margin: 0; padding: 20px 0 0 0; position: relative; }
-.arbol > ul { padding-top: 0; }
-.arbol li { text-align: center; position: relative; padding: 20px 6px 0 6px; }
-.arbol > ul > li { padding-top: 0; }
-
-.arbol li::before, .arbol li::after {
-    content: ''; position: absolute; top: 0; right: 50%;
-    border-top: 2px solid #aa2727; width: 50%; height: 20px;
+.arbol {
+    overflow-x: auto;
+    padding: 10px 0;
 }
-.arbol li::after { right: auto; left: 50%; border-left: 2px solid #aa2727; }
-.arbol > ul > li::before, .arbol > ul > li::after { display: none; }
-.arbol li:first-child::before, .arbol li:last-child::after { border: 0 none; }
-.arbol li:last-child::before { border-right: 2px solid #aa2727; }
+
+.arbol ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin: 0;
+    padding: 20px 0 0 0;
+    position: relative;
+}
+
+.arbol>ul {
+    padding-top: 0;
+}
+
+.arbol li {
+    text-align: center;
+    position: relative;
+    padding: 20px 6px 0 6px;
+}
+
+.arbol>ul>li {
+    padding-top: 0;
+}
+
+.arbol li::before,
+.arbol li::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 50%;
+    border-top: 2px solid #1f3f25;
+    width: 50%;
+    height: 20px;
+}
+
+.arbol li::after {
+    right: auto;
+    left: 50%;
+    border-left: 2px solid #aa2727;
+}
+
+.arbol>ul>li::before,
+.arbol>ul>li::after {
+    display: none;
+}
+
+.arbol li:first-child::before,
+.arbol li:last-child::after {
+    border: 0 none;
+}
+
+.arbol li:last-child::before {
+    border-right: 2px solid #115527;
+}
 
 .arbol ul ul::before {
-    content: ''; position: absolute; top: 0; left: 50%;
-    border-left: 2px solid #aa2727; height: 20px;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    border-left: 2px solid #1c4e1b;
+    height: 20px;
 }
 
 .arbol .nodo {
-    display: inline-block; min-width: 20px; padding: 8px 12px;
-    border: 2px solid #183630; border-radius: 50%;
-    background:  #d8d1c2; color: #183630; font-weight: bold;
+    display: inline-block;
+    min-width: 20px;
+    padding: 8px 12px;
+    border: 2px solid #183630;
+    border-radius: 50%;
+    background: #d8d1c2;
+    color: #183630;
+    font-weight: bold;
 }
-.arbol .vacio { border: 1px dashed #ccc; background: transparent; color: transparent; }
 
-/* ===== Pantallas pequeñas: el menú vuelve a ir arriba ===== */
-@media (max-width: 800px) {
-    .menu {
-        position: static;
-        width: 100%;
-        height: auto;
-        flex-direction: row;
-        flex-wrap: wrap;
-        padding: 10px;
-    }
-    .menu::before { display: none; }
-    main { margin: 16px; padding: 20px; }
+.arbol .vacio {
+    border: 1px dashed #ccc;
+    background: transparent;
+    color: transparent;
 }

@@ -26,11 +26,13 @@ elseif (isset($_POST['cantidad'])) {
 ?>
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <title>Estadística</title>
     <link rel="stylesheet" href="../css/estilos.css">
 </head>
+
 <body>
     <?php include '../Menu.php'; ?>
     <main>
@@ -66,14 +68,14 @@ elseif (isset($_POST['cantidad'])) {
                 <p>Mediana: <strong><?php echo $estadistica->mediana(); ?></strong></p>
                 <p>Moda:
                     <strong>
-                    <?php
-                    $modas = $estadistica->moda();
-                    if (count($modas) == 0) {
-                        echo "No hay moda";
-                    } else {
-                        echo implode(", ", $modas);
-                    }
-                    ?>
+                        <?php
+                        $modas = $estadistica->moda();
+                        if (count($modas) == 0) {
+                            echo "No hay moda";
+                        } else {
+                            echo implode(", ", $modas);
+                        }
+                        ?>
                     </strong>
                 </p>
             </div>
@@ -81,4 +83,5 @@ elseif (isset($_POST['cantidad'])) {
         <?php } ?>
     </main>
 </body>
+
 </html>

@@ -24,12 +24,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 ?>
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Fibonacci / Factorial</title>
     <link rel="stylesheet" href="../css/estilos.css">
 </head>
+
 <body>
     <?php include __DIR__ . '/../Menu.php'; ?>
     <main>
@@ -57,4 +59,5 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <?php endif; ?>
     </main>
 </body>
+
 </html>

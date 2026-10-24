@@ -12,7 +12,7 @@ $opciones = [
 ?>
 <nav class="menu">
     <a href="<?= $base ?>index.php" class="inicio">Inicio</a>
-     <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="css/estilos.css">
     <?php foreach ($opciones as $archivo => $titulo): ?>
         <a href="<?= $base ?>apps/<?= $archivo ?>"><?= $titulo ?></a>
     <?php endforeach; ?>

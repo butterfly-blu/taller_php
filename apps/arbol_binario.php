@@ -61,11 +61,13 @@ if (isset($_POST['preorden'])) {
 ?>
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <title>Árbol binario</title>
     <link rel="stylesheet" href="../css/estilos.css">
 </head>
+
 <body>
     <?php include '../Menu.php'; ?>
     <main>
@@ -113,4 +115,5 @@ if (isset($_POST['preorden'])) {
         <?php } ?>
     </main>
 </body>
+
 </html>
